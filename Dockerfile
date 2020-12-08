@@ -17,6 +17,7 @@ RUN apk add --update --no-cache php php-zip php-bcmath php-gd php-memcached php-
 
 # increase PHP memory limit
 RUN echo "memory_limit=512M" >> /etc/php8/conf.d/memory_limit.ini
+RUN echo "xdebug.mode=coverage" >> /etc/php8/conf.d/xdebug.ini
 
 RUN ln -s /usr/bin/php8 /usr/local/bin/php
 
