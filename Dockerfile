@@ -13,7 +13,7 @@ RUN apk --update --no-cache add ca-certificates
 RUN echo "https://dl.bintray.com/php-alpine/v3.12/php-8.0" >> /etc/apk/repositories
 
 # install php and some extensions
-RUN apk add --update --no-cache php php-zip php-bcmath php-gd php-memcached php-mysqli php-xsl php-ldap php-curl php-mbstring php-phar php-sqlite3 php-pdo php-ctype php-apcu php-xdebug
+RUN apk add --update --no-cache php php-zip php-bcmath php-gd php-memcached php-mysqli php-xsl php-intl php-ldap php-curl php-mbstring php-phar php-sqlite3 php-pdo php-ctype php-apcu php-xdebug
 
 # increase PHP memory limit
 RUN echo "memory_limit=512M" >> /etc/php8/conf.d/memory_limit.ini
